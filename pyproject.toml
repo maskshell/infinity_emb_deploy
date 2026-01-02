@@ -1,0 +1,25 @@
+[project]
+name = "infinity_emb_deploy"
+version = "0.1.0"
+description = "Deployment environment for infinity_emb with original optional server and torch dependencies. Designed for non-Docker environments."
+readme = "README.md"
+requires-python = "==3.12.*"
+authors = [{ name = "analyser", email = "analyser@gmail.com" }]
+keywords = ["vector", "embedding", "neural", "search", "sentence-transformers"]
+dependencies = [
+    "infinity_emb>=0.0.77",
+    "numpy>=1.20.0,<2",
+    "huggingface_hub>=0.32.0",
+    "transformers>=4.36,<4.49.0",
+    "optimum[onnxruntime]==1.24.0",
+    "fastapi>=0.103.2",
+    "orjson>=3.9.8,!=3.10.0",
+    "prometheus-fastapi-instrumentator>=6.1.0",
+    "uvicorn[standard]>=0.32.0",
+    "typer>=0.12.5",
+    "pydantic>=2.4.0,<3",
+    "posthog>=1.0.0",
+    "rich>=13.0.0",
+    "torch>=2.2.1",
+    "sentence-transformers>=3.0.1",
+]
