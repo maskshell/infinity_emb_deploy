@@ -1,6 +1,6 @@
 # Infinity Embedding Deployment Environment
 
-A pre-configured deployment environment for [infinity_emb](https://github.com/michaelfein/infinity) with all necessary dependencies including PyTorch, ONNX Runtime, and FastAPI server components. This package is especially useful for non-Docker deployment scenarios.
+A pre-configured deployment environment for [infinity_emb](https://github.com/michaelfeil/infinity) with all necessary dependencies including PyTorch, ONNX Runtime, and FastAPI server components. This package is especially useful for non-Docker deployment scenarios.
 
 ## Background
 
