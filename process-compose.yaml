@@ -1,0 +1,20 @@
+version: "0.5"
+processes:
+  infinity_emb:
+    name: infinity_emb
+    command: "uv run infinity_emb v2 --model-id BAAI/bge-m3 --model-id BAAI/bge-reranker-v2-m3 --device mps --port 7997"
+    working_dir: "/opt/infinity"
+    is_daemon: false
+    restart: "always"
+    restart_delay: 5s
+    environment:
+      - TOKENIZERS_PARALLELISM=false
+      - PYTORCH_ENABLE_MPS_FALLBACK=1
+    availability:
+      restart: "on_failure"
+      backoff_seconds: 2
+      max_restarts: 5
+    log_location: "./logs/infinity_emb.log"
+    shutdown:
+      timeout: 30s
+      signal: 15

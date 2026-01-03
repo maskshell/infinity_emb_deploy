@@ -1,3 +1,4 @@
 uv.lock
 .venv
 .infinity_cache
+logs/
